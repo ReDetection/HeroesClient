@@ -1,0 +1,1 @@
+../../../../../../github/NPDesktop/NPDesktop/jpeg/jpeglib.h

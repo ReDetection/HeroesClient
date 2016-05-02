@@ -1,0 +1,14 @@
+PODS:
+  - RFBConnection (0.1.0)
+
+DEPENDENCIES:
+  - RFBConnection (from `~/src/github/NPDesktop`)
+
+EXTERNAL SOURCES:
+  RFBConnection:
+    :path: ~/src/github/NPDesktop
+
+SPEC CHECKSUMS:
+  RFBConnection: 857c44573c3ea5e558cbed16666510201d7b9b85
+
+COCOAPODS: 0.39.0

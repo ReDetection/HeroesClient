@@ -1,0 +1,7 @@
+xcuserdata
+.DS_Store
+.idea
+*.xccheckout
+*.realm.lock
+*.realm.log*
+/Carthage/Checkouts
