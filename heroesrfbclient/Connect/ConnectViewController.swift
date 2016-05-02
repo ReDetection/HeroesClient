@@ -12,11 +12,19 @@ private let LAST_HOST_ADDRESS_KEY = "LAST_HOST_ADDRESS_KEY"
 private let LAST_PORT_KEY = "LAST_PORT_KEY"
 private let LAST_PASSWORD_KEY = "LAST_PASSWORD_KEY"
 
+private enum ConnectionResult {
+    case Error(NSError)
+    case OK(RFBFramebufferedConnection)
+}
+
 class ConnectViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var hostField: UITextField!
     @IBOutlet var portField: UITextField!
     @IBOutlet var passwordField: UITextField!
+    
+    var connectionReference: RFBFramebufferedConnection?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +36,23 @@ class ConnectViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func connectTapped(sender: AnyObject) {
         self.saveCredentials()
+        if let host = self.hostField.text, portText = self.portField.text {
+            self.tryConnect(host, port: (portText as NSString).intValue, password: self.passwordField.text) { [weak self] result in
+                dispatch_async(dispatch_get_main_queue()) {
+                    switch result {
+                    case .OK(let server):
+                        AppState.sharedInstance.server = server
+                        self?.view.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+                        
+                    case .Error(let error):
+                        print ("\(error)")
+                        let alert = UIAlertController(title: "\(error.code)", message: error.localizedDescription, preferredStyle: .Alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                        self?.presentViewController(alert, animated: true, completion: nil)
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func forgetTapped(sender: AnyObject) {
@@ -55,6 +80,31 @@ class ConnectViewController: UIViewController, UITextFieldDelegate {
         defaults.removeObjectForKey(LAST_PORT_KEY)
         defaults.removeObjectForKey(LAST_PASSWORD_KEY)
         defaults.synchronize()
+    }
+    
+    private func tryConnect(host: String, port: Int32, password: String?, resultBlock: ((ConnectionResult)->())? ) {
+        let config = RFBServerData()
+        config.host = host
+        config.port = port
+        config.password = password
+        
+        var dispatch_once_token: dispatch_once_t = 0
+        
+        let server = RFBFramebufferedConnection(serverData: config)
+        server.didUpdatedRect = { rect in
+            server.didUpdatedRect = nil
+            server.didErrorOccurred = nil
+            dispatch_once(&dispatch_once_token) {
+                resultBlock?(.OK(server))
+            }
+        }
+        server.didErrorOccurred = { error in
+            server.didUpdatedRect = nil
+            server.didErrorOccurred = nil
+            resultBlock?(.Error(error))
+        }
+        self.connectionReference = server
+        server.connect()
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {

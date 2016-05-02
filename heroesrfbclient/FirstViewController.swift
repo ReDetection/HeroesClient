@@ -10,42 +10,45 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
-    var a: RFBFramebufferedConnection!
+    var server: RFBFramebufferedConnection!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let server = RFBServerData()
-
-        a = RFBFramebufferedConnection(serverData: server)
-        a.didUpdatedFrame = { [ weak a] in
-            a?.requestScreenUpdate(true)
+        guard let server = AppState.sharedInstance.server else {
+            self.openConnectScreen()
+            return
         }
-        a.didUpdatedRect = { [weak self, weak a] (rect) in
-            if let view = self?.view as? RFBView, framebuffer = a?.framebuffer {
+        self.server = server
+        
+        server.didUpdatedFrame = { [ weak server] in
+            server?.requestScreenUpdate(true)
+        }
+        server.didUpdatedRect = { [weak self, weak server] (rect) in
+            if let view = self?.view as? RFBView, framebuffer = server?.framebuffer {
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     view.framebuffer = framebuffer
                     view.setNeedsDisplayInRect(rect)
                 })
             }
         }
-        a.didErrorOccurred = { [weak self] (error) in
+        server.didErrorOccurred = { [weak self] (error) in
             dispatch_async(dispatch_get_main_queue()) {
                 print ("\(error)")
                 let alert = UIAlertController(title: "\(error.code)", message: error.localizedDescription, preferredStyle: .Alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { _ in
+                    self?.view.window?.rootViewController = UIStoryboard(name: "ConnectToServer", bundle: nil).instantiateInitialViewController()
+                }))
                 self?.presentViewController(alert, animated: true, completion: nil)
             }
         }
-        a.connect()
+        server.requestScreenUpdate(true)
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func openConnectScreen() {
+        self.view.window?.rootViewController = UIStoryboard(name: "ConnectToServer", bundle: nil).instantiateInitialViewController()
     }
-
 
 }
 
