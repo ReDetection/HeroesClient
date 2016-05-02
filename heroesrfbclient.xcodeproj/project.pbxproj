@@ -15,6 +15,8 @@
 		368385191CD7071F00C84DA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368385171CD7071F00C84DA6 /* LaunchScreen.storyboard */; };
 		368385241CD7071F00C84DA6 /* heroesrfbclientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368385231CD7071F00C84DA6 /* heroesrfbclientTests.swift */; };
 		368385341CD71FC200C84DA6 /* RFBFramebufferedConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 368385331CD71FC200C84DA6 /* RFBFramebufferedConnection.m */; };
+		368385391CD770ED00C84DA6 /* ConnectToServer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368385381CD770ED00C84DA6 /* ConnectToServer.storyboard */; };
+		3683853B1CD771D200C84DA6 /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683853A1CD771D200C84DA6 /* ConnectViewController.swift */; };
 		6D1717DB012245A32FE7FCDD /* libPods-heroesrfbclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E174BDEC2D4009B76B1ABC /* libPods-heroesrfbclient.a */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		3683852E1CD7120600C84DA6 /* heroesrfbclient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "heroesrfbclient-Bridging-Header.h"; sourceTree = "<group>"; };
 		368385321CD71FC200C84DA6 /* RFBFramebufferedConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFBFramebufferedConnection.h; sourceTree = "<group>"; };
 		368385331CD71FC200C84DA6 /* RFBFramebufferedConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFBFramebufferedConnection.m; sourceTree = "<group>"; };
+		368385381CD770ED00C84DA6 /* ConnectToServer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ConnectToServer.storyboard; sourceTree = "<group>"; };
+		3683853A1CD771D200C84DA6 /* ConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
 		83E174BDEC2D4009B76B1ABC /* libPods-heroesrfbclient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-heroesrfbclient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B44257E0F5837EFAFC632B43 /* Pods-heroesrfbclient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heroesrfbclient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-heroesrfbclient/Pods-heroesrfbclient.debug.xcconfig"; sourceTree = "<group>"; };
 		F0DEA408AFF5A53897A3AD01 /* Pods-heroesrfbclient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heroesrfbclient.release.xcconfig"; path = "Pods/Target Support Files/Pods-heroesrfbclient/Pods-heroesrfbclient.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				3683850C1CD7071F00C84DA6 /* AppDelegate.swift */,
+				368385371CD770ED00C84DA6 /* Connect */,
 				3683850E1CD7071F00C84DA6 /* FirstViewController.swift */,
 				368385101CD7071F00C84DA6 /* SecondViewController.swift */,
 				368385121CD7071F00C84DA6 /* Main.storyboard */,
@@ -120,6 +125,15 @@
 				368385251CD7071F00C84DA6 /* Info.plist */,
 			);
 			path = heroesrfbclientTests;
+			sourceTree = "<group>";
+		};
+		368385371CD770ED00C84DA6 /* Connect */ = {
+			isa = PBXGroup;
+			children = (
+				368385381CD770ED00C84DA6 /* ConnectToServer.storyboard */,
+				3683853A1CD771D200C84DA6 /* ConnectViewController.swift */,
+			);
+			path = Connect;
 			sourceTree = "<group>";
 		};
 		CCCFA48223C34929475040FE /* Frameworks */ = {
@@ -217,6 +231,7 @@
 				368385191CD7071F00C84DA6 /* LaunchScreen.storyboard in Resources */,
 				368385161CD7071F00C84DA6 /* Assets.xcassets in Resources */,
 				368385141CD7071F00C84DA6 /* Main.storyboard in Resources */,
+				368385391CD770ED00C84DA6 /* ConnectToServer.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3683853B1CD771D200C84DA6 /* ConnectViewController.swift in Sources */,
 				368385111CD7071F00C84DA6 /* SecondViewController.swift in Sources */,
 				3683850D1CD7071F00C84DA6 /* AppDelegate.swift in Sources */,
 				3683850F1CD7071F00C84DA6 /* FirstViewController.swift in Sources */,

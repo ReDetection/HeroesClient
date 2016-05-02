@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="uLj-5U-Oz2">
+    <dependencies>
+        <deployment version="2048" identifier="iOS"/>
+        <development version="7000" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Connect View Controller-->
+        <scene sceneID="tpt-hV-Ndb">
+            <objects>
+                <viewController id="uLj-5U-Oz2" customClass="ConnectViewController" customModule="heroesrfbclient" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GOR-Ze-JMZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="TlZ-f1-ZIm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VsB-c9-78Q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80y-fF-flk" userLabel="middle">
+                                <rect key="frame" x="156" y="0.0" width="8" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="8" id="dEU-oq-sqR"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="host" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VVR-e3-SXi">
+                                <rect key="frame" x="164" y="46" width="136" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="uLj-5U-Oz2" id="UdJ-Bq-fUT"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5900" placeholder="host" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BSw-4W-dM1">
+                                <rect key="frame" x="164" y="75" width="120" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="uLj-5U-Oz2" id="2wu-Z8-kk4"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="if any" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Owd-hs-GHG">
+                                <rect key="frame" x="164" y="104" width="136" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="uLj-5U-Oz2" id="xbs-IS-C1X"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VNC address" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vs3-IM-Fnw">
+                                <rect key="frame" x="36" y="43" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Port" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEd-1x-hHv">
+                                <rect key="frame" x="33" y="72" width="123" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFa-kQ-2mv">
+                                <rect key="frame" x="20" y="101" width="136" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLE-dU-HPR">
+                                <rect key="frame" x="111" y="138" width="45" height="30"/>
+                                <state key="normal" title="Forget"/>
+                                <connections>
+                                    <action selector="forgetTapped:" destination="uLj-5U-Oz2" eventType="touchUpInside" id="j5m-VO-ktu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnq-aU-l0f">
+                                <rect key="frame" x="164" y="138" width="59" height="30"/>
+                                <state key="normal" title="Connect"/>
+                                <connections>
+                                    <action selector="connectTapped:" destination="uLj-5U-Oz2" eventType="touchUpInside" id="VAv-XD-ryJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="80y-fF-flk" firstAttribute="leading" secondItem="vs3-IM-Fnw" secondAttribute="trailing" id="2HV-MV-eIU"/>
+                            <constraint firstItem="BSw-4W-dM1" firstAttribute="baseline" secondItem="xEd-1x-hHv" secondAttribute="baseline" id="6dS-iL-8ub"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BSw-4W-dM1" secondAttribute="trailing" constant="20" id="7K0-LP-eo9"/>
+                            <constraint firstItem="bnq-aU-l0f" firstAttribute="baseline" secondItem="jLE-dU-HPR" secondAttribute="baseline" id="8bO-ky-LEL"/>
+                            <constraint firstItem="xEd-1x-hHv" firstAttribute="top" secondItem="vs3-IM-Fnw" secondAttribute="bottom" constant="8" id="CfA-aY-V67"/>
+                            <constraint firstItem="80y-fF-flk" firstAttribute="centerX" secondItem="VsB-c9-78Q" secondAttribute="centerX" id="Fac-Ur-dKM"/>
+                            <constraint firstAttribute="bottom" secondItem="80y-fF-flk" secondAttribute="bottom" id="GNU-SA-bjC"/>
+                            <constraint firstItem="80y-fF-flk" firstAttribute="leading" secondItem="xEd-1x-hHv" secondAttribute="trailing" id="LC5-CZ-c6a"/>
+                            <constraint firstItem="gFa-kQ-2mv" firstAttribute="top" secondItem="xEd-1x-hHv" secondAttribute="bottom" constant="8" id="LSE-V7-KLO"/>
+                            <constraint firstItem="VVR-e3-SXi" firstAttribute="leading" secondItem="80y-fF-flk" secondAttribute="trailing" id="Lm9-Nj-Efk"/>
+                            <constraint firstItem="gFa-kQ-2mv" firstAttribute="leading" secondItem="VsB-c9-78Q" secondAttribute="leading" constant="20" id="Mod-ms-Axd"/>
+                            <constraint firstItem="80y-fF-flk" firstAttribute="top" secondItem="VsB-c9-78Q" secondAttribute="top" id="NoM-5R-8Ty"/>
+                            <constraint firstItem="Owd-hs-GHG" firstAttribute="leading" secondItem="80y-fF-flk" secondAttribute="trailing" id="PHL-YL-fUM"/>
+                            <constraint firstItem="jLE-dU-HPR" firstAttribute="top" secondItem="gFa-kQ-2mv" secondAttribute="bottom" constant="16" id="Sxz-yY-Drr"/>
+                            <constraint firstItem="BSw-4W-dM1" firstAttribute="leading" secondItem="80y-fF-flk" secondAttribute="trailing" id="VPZ-RS-6O5"/>
+                            <constraint firstItem="80y-fF-flk" firstAttribute="leading" secondItem="gFa-kQ-2mv" secondAttribute="trailing" id="X8c-nY-9WL"/>
+                            <constraint firstItem="xEd-1x-hHv" firstAttribute="leading" secondItem="VsB-c9-78Q" secondAttribute="leading" constant="33" id="XNy-9b-KOU"/>
+                            <constraint firstItem="80y-fF-flk" firstAttribute="leading" secondItem="jLE-dU-HPR" secondAttribute="trailing" id="dKV-Pb-9ZG"/>
+                            <constraint firstAttribute="trailing" secondItem="VVR-e3-SXi" secondAttribute="trailing" constant="20" id="gEM-QL-oIC"/>
+                            <constraint firstItem="VVR-e3-SXi" firstAttribute="baseline" secondItem="vs3-IM-Fnw" secondAttribute="baseline" id="lEV-dl-P66"/>
+                            <constraint firstItem="vs3-IM-Fnw" firstAttribute="leading" secondItem="VsB-c9-78Q" secondAttribute="leadingMargin" constant="20" id="lfs-HF-CxD"/>
+                            <constraint firstItem="Owd-hs-GHG" firstAttribute="baseline" secondItem="gFa-kQ-2mv" secondAttribute="baseline" id="oxk-4H-dq8"/>
+                            <constraint firstItem="vs3-IM-Fnw" firstAttribute="top" secondItem="GOR-Ze-JMZ" secondAttribute="bottom" constant="23" id="q1s-pV-eQ0"/>
+                            <constraint firstAttribute="trailing" secondItem="Owd-hs-GHG" secondAttribute="trailing" constant="20" id="u7n-hN-9h6"/>
+                            <constraint firstItem="bnq-aU-l0f" firstAttribute="leading" secondItem="80y-fF-flk" secondAttribute="trailing" id="xpW-4Q-FZb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hostField" destination="VVR-e3-SXi" id="xHy-Op-m3p"/>
+                        <outlet property="passwordField" destination="Owd-hs-GHG" id="jbN-MJ-eK7"/>
+                        <outlet property="portField" destination="BSw-4W-dM1" id="Dm1-z5-gHu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pdS-NM-Xxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="148" y="341"/>
+        </scene>
+    </scenes>
+</document>
