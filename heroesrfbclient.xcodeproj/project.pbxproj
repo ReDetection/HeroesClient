@@ -18,6 +18,7 @@
 		368385391CD770ED00C84DA6 /* ConnectToServer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368385381CD770ED00C84DA6 /* ConnectToServer.storyboard */; };
 		3683853B1CD771D200C84DA6 /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683853A1CD771D200C84DA6 /* ConnectViewController.swift */; };
 		368385411CD7BFC500C84DA6 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368385401CD7BFC500C84DA6 /* AppState.swift */; };
+		368385431CD8591800C84DA6 /* RFBRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368385421CD8591800C84DA6 /* RFBRectView.swift */; };
 		6D1717DB012245A32FE7FCDD /* libPods-heroesrfbclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E174BDEC2D4009B76B1ABC /* libPods-heroesrfbclient.a */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		368385381CD770ED00C84DA6 /* ConnectToServer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ConnectToServer.storyboard; sourceTree = "<group>"; };
 		3683853A1CD771D200C84DA6 /* ConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
 		368385401CD7BFC500C84DA6 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		368385421CD8591800C84DA6 /* RFBRectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFBRectView.swift; sourceTree = "<group>"; };
 		83E174BDEC2D4009B76B1ABC /* libPods-heroesrfbclient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-heroesrfbclient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B44257E0F5837EFAFC632B43 /* Pods-heroesrfbclient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heroesrfbclient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-heroesrfbclient/Pods-heroesrfbclient.debug.xcconfig"; sourceTree = "<group>"; };
 		F0DEA408AFF5A53897A3AD01 /* Pods-heroesrfbclient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heroesrfbclient.release.xcconfig"; path = "Pods/Target Support Files/Pods-heroesrfbclient/Pods-heroesrfbclient.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				3683851A1CD7071F00C84DA6 /* Info.plist */,
 				368385321CD71FC200C84DA6 /* RFBFramebufferedConnection.h */,
 				368385331CD71FC200C84DA6 /* RFBFramebufferedConnection.m */,
+				368385421CD8591800C84DA6 /* RFBRectView.swift */,
 			);
 			path = heroesrfbclient;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				368385111CD7071F00C84DA6 /* SecondViewController.swift in Sources */,
 				368385411CD7BFC500C84DA6 /* AppState.swift in Sources */,
 				3683850D1CD7071F00C84DA6 /* AppDelegate.swift in Sources */,
+				368385431CD8591800C84DA6 /* RFBRectView.swift in Sources */,
 				3683850F1CD7071F00C84DA6 /* FirstViewController.swift in Sources */,
 				368385341CD71FC200C84DA6 /* RFBFramebufferedConnection.m in Sources */,
 			);

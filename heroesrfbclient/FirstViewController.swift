@@ -11,7 +11,8 @@ import UIKit
 class FirstViewController: UIViewController {
     
     var server: RFBFramebufferedConnection!
-
+    @IBOutlet var screenView: RFBRectView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,15 +21,15 @@ class FirstViewController: UIViewController {
             return
         }
         self.server = server
+        self.screenView.framebuffer = server.framebuffer
         
         server.didUpdatedFrame = { [ weak server] in
             server?.requestScreenUpdate(true)
         }
-        server.didUpdatedRect = { [weak self, weak server] (rect) in
-            if let view = self?.view as? RFBView, framebuffer = server?.framebuffer {
+        server.didUpdatedRect = { [weak self] (rect) in
+            if let view = self?.screenView {
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    view.framebuffer = framebuffer
-                    view.setNeedsDisplayInRect(rect)
+                    view.setNeedsDisplayInOuterRect(rect)
                 })
             }
         }
@@ -50,23 +51,4 @@ class FirstViewController: UIViewController {
         self.view.window?.rootViewController = UIStoryboard(name: "ConnectToServer", bundle: nil).instantiateInitialViewController()
     }
 
-}
-
-class RFBView: UIView {
-    
-    var framebuffer: RFBFrameBuffer?
-    
-    override func drawRect(rect: CGRect) {
-        if let framebuffer = self.framebuffer {
-            
-            let ctx = UIGraphicsGetCurrentContext();
-            CGContextSaveGState(ctx);
-            
-            framebuffer.drawFullInRect(CGRectMake(0, 0, framebuffer.size.width, framebuffer.size.height), context: ctx)
-            
-            CGContextRestoreGState(ctx);
-        }
-
-    }
-    
 }
