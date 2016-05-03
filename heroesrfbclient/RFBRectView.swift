@@ -12,6 +12,7 @@ class RFBRectView: UIView {
     
     var framebuffer: RFBFrameBuffer?
     @IBInspectable var frameRect: CGRect = CGRectZero
+    @IBOutlet weak var parentController: UIViewController?
     var scaleX: CGFloat {
         return self.bounds.size.width / frameRect.size.width
     }

@@ -42,6 +42,7 @@ class FrameBufferUpdater {
     }
     
     func subscribeView(view: RFBRectView) {
+        print("subscribed view with rect \(view.frameRect)")
         subscribedViews.append(view)
         self.active = !subscribedViews.isEmpty
     }
@@ -50,12 +51,13 @@ class FrameBufferUpdater {
         if let index = subscribedViews.indexOf(view) {
             subscribedViews.removeAtIndex(index)
             self.active = !subscribedViews.isEmpty
+            print("unsubscribed view with rect \(view.frameRect)")
         }
     }
     
     func filterOutFreedViews() {
         self.subscribedViews.flatMap { (view) in
-            return view.window == nil ? view : nil
+            return view.parentController == nil ? view : nil
         }.forEach { (view) -> () in
             self.unsubscribeView(view)
         }

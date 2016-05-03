@@ -6,7 +6,7 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Parent Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="heroesrfbclient" customModuleProvider="target" sceneMemberID="viewController">
@@ -39,6 +39,9 @@
                                         <rect key="value" x="70" y="70" width="200" height="100"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="parentController" destination="9pv-A4-QxB" id="UTR-qP-d4z"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -117,7 +120,7 @@
             </objects>
             <point key="canvasLocation" x="723" y="1700"/>
         </scene>
-        <!--Castle-->
+        <!--Parent Controller-->
         <scene sceneID="qjs-qW-HWE">
             <objects>
                 <viewController id="CAP-3c-s25" sceneMemberID="viewController">
@@ -140,6 +143,9 @@
                                         <rect key="value" x="0.0" y="0.0" width="800" height="600"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="parentController" destination="CAP-3c-s25" id="xUo-wq-5Gz"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -175,7 +181,7 @@
             </objects>
             <point key="canvasLocation" x="183" y="1366"/>
         </scene>
-        <!--Item 2-->
+        <!--Parent Controller-->
         <scene sceneID="EWb-DV-ehx">
             <objects>
                 <viewController id="Ow1-ch-uCF" sceneMemberID="viewController">
@@ -186,15 +192,44 @@
                     <view key="view" contentMode="scaleToFill" id="Whc-zX-Edo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w4n-nk-KS7" customClass="RFBRectView" customModule="heroesrfbclient" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="121" width="320" height="326"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="w4n-nk-KS7" secondAttribute="height" multiplier="97:99" id="fHl-Rx-AAS"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="rect" keyPath="frameRect">
+                                        <rect key="value" x="605" y="193" width="194" height="198"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="parentController" destination="Ow1-ch-uCF" id="83E-Nv-fuJ"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="w4n-nk-KS7" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ewR-Y4-Ldv" secondAttribute="bottom" id="5BN-cm-fv6"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="w4n-nk-KS7" secondAttribute="trailing" id="7LN-Ud-iph"/>
+                            <constraint firstItem="w4n-nk-KS7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Whc-zX-Edo" secondAttribute="leading" id="7hd-py-hjv"/>
+                            <constraint firstAttribute="trailing" secondItem="w4n-nk-KS7" secondAttribute="trailing" priority="750" id="PgZ-ze-Loa"/>
+                            <constraint firstItem="w4n-nk-KS7" firstAttribute="leading" secondItem="Whc-zX-Edo" secondAttribute="leading" priority="750" id="gAb-tm-BV7"/>
+                            <constraint firstItem="w4n-nk-KS7" firstAttribute="centerX" secondItem="Whc-zX-Edo" secondAttribute="centerX" id="jd2-A8-0yD"/>
+                            <constraint firstItem="w4n-nk-KS7" firstAttribute="top" secondItem="ewR-Y4-Ldv" secondAttribute="bottom" priority="750" id="p41-M7-3Bb"/>
+                            <constraint firstItem="adM-2H-2CJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="w4n-nk-KS7" secondAttribute="bottom" id="thX-Ui-Bge"/>
+                            <constraint firstItem="w4n-nk-KS7" firstAttribute="centerY" secondItem="Whc-zX-Edo" secondAttribute="centerY" id="vz5-ce-adS"/>
+                            <constraint firstItem="adM-2H-2CJ" firstAttribute="top" secondItem="w4n-nk-KS7" secondAttribute="bottom" priority="750" id="xNf-qi-CdW"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Y9Y-lZ-6FL"/>
+                    <tabBarItem key="tabBarItem" title="menu" id="Y9Y-lZ-6FL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="etT-vX-OHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="723" y="332"/>
         </scene>
-        <!--Item 1-->
+        <!--Parent Controller-->
         <scene sceneID="kgy-zn-UUh">
             <objects>
                 <viewController id="Pyt-79-ebi" sceneMemberID="viewController">
@@ -205,9 +240,38 @@
                     <view key="view" contentMode="scaleToFill" id="EAq-Pq-HI7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="Ec2-mo-7e2" customClass="RFBRectView" customModule="heroesrfbclient" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="137" width="320" height="294"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ec2-mo-7e2" secondAttribute="height" multiplier="37:34" id="uNa-rT-gme"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="rect" keyPath="frameRect">
+                                        <rect key="value" x="8" y="8" width="592" height="544"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="parentController" destination="Pyt-79-ebi" id="Yqr-e4-fYh"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rpu-0x-Vr9" firstAttribute="top" secondItem="Ec2-mo-7e2" secondAttribute="bottom" priority="750" id="4nA-PW-gTb"/>
+                            <constraint firstItem="Ec2-mo-7e2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EAq-Pq-HI7" secondAttribute="leading" id="JIZ-bt-88w"/>
+                            <constraint firstItem="Ec2-mo-7e2" firstAttribute="leading" secondItem="EAq-Pq-HI7" secondAttribute="leading" priority="750" id="JZ4-EA-BLF"/>
+                            <constraint firstItem="Ec2-mo-7e2" firstAttribute="centerX" secondItem="EAq-Pq-HI7" secondAttribute="centerX" id="RaO-t9-71C"/>
+                            <constraint firstItem="Ec2-mo-7e2" firstAttribute="top" secondItem="CJo-Iz-zL9" secondAttribute="bottom" priority="750" id="TAQ-Yy-p5M"/>
+                            <constraint firstItem="Ec2-mo-7e2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CJo-Iz-zL9" secondAttribute="bottom" id="Wu5-y7-5fS"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ec2-mo-7e2" secondAttribute="trailing" id="ovV-Sr-5BZ"/>
+                            <constraint firstAttribute="trailing" secondItem="Ec2-mo-7e2" secondAttribute="trailing" priority="750" id="v7r-fO-Yjy"/>
+                            <constraint firstItem="Ec2-mo-7e2" firstAttribute="centerY" secondItem="EAq-Pq-HI7" secondAttribute="centerY" id="wrQ-np-VIC"/>
+                            <constraint firstItem="Rpu-0x-Vr9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ec2-mo-7e2" secondAttribute="bottom" id="yt0-gI-FbB"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="isD-na-zWZ"/>
+                    <tabBarItem key="tabBarItem" title="Field" id="isD-na-zWZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJR-bw-wVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
