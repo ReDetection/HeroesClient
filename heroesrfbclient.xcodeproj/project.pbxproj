@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		367BE2CB1CD878DE0089F649 /* RFBRectView+Autoconnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367BE2CA1CD878DE0089F649 /* RFBRectView+Autoconnect.swift */; };
 		367BE2CD1CD87B3B0089F649 /* FrameBufferUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367BE2CC1CD87B3B0089F649 /* FrameBufferUpdater.swift */; };
+		367BE2CF1CD8A1220089F649 /* RectAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367BE2CE1CD8A1220089F649 /* RectAdditions.swift */; };
+		367BE2D01CD8A1E00089F649 /* RectAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367BE2CE1CD8A1220089F649 /* RectAdditions.swift */; };
 		3683850D1CD7071F00C84DA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683850C1CD7071F00C84DA6 /* AppDelegate.swift */; };
 		3683850F1CD7071F00C84DA6 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683850E1CD7071F00C84DA6 /* FirstViewController.swift */; };
 		368385111CD7071F00C84DA6 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368385101CD7071F00C84DA6 /* SecondViewController.swift */; };
 		368385141CD7071F00C84DA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368385121CD7071F00C84DA6 /* Main.storyboard */; };
 		368385161CD7071F00C84DA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 368385151CD7071F00C84DA6 /* Assets.xcassets */; };
 		368385191CD7071F00C84DA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368385171CD7071F00C84DA6 /* LaunchScreen.storyboard */; };
-		368385241CD7071F00C84DA6 /* heroesrfbclientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368385231CD7071F00C84DA6 /* heroesrfbclientTests.swift */; };
+		368385241CD7071F00C84DA6 /* RectAdditionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368385231CD7071F00C84DA6 /* RectAdditionsTests.swift */; };
 		368385341CD71FC200C84DA6 /* RFBFramebufferedConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 368385331CD71FC200C84DA6 /* RFBFramebufferedConnection.m */; };
 		368385391CD770ED00C84DA6 /* ConnectToServer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368385381CD770ED00C84DA6 /* ConnectToServer.storyboard */; };
 		3683853B1CD771D200C84DA6 /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683853A1CD771D200C84DA6 /* ConnectViewController.swift */; };
@@ -24,19 +26,10 @@
 		6D1717DB012245A32FE7FCDD /* libPods-heroesrfbclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E174BDEC2D4009B76B1ABC /* libPods-heroesrfbclient.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		368385201CD7071F00C84DA6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 368385011CD7071F00C84DA6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 368385081CD7071F00C84DA6;
-			remoteInfo = heroesrfbclient;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		367BE2CA1CD878DE0089F649 /* RFBRectView+Autoconnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RFBRectView+Autoconnect.swift"; sourceTree = "<group>"; };
 		367BE2CC1CD87B3B0089F649 /* FrameBufferUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameBufferUpdater.swift; sourceTree = "<group>"; };
+		367BE2CE1CD8A1220089F649 /* RectAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectAdditions.swift; sourceTree = "<group>"; };
 		368385091CD7071F00C84DA6 /* heroesrfbclient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = heroesrfbclient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3683850C1CD7071F00C84DA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3683850E1CD7071F00C84DA6 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +39,7 @@
 		368385181CD7071F00C84DA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3683851A1CD7071F00C84DA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3683851F1CD7071F00C84DA6 /* heroesrfbclientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = heroesrfbclientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		368385231CD7071F00C84DA6 /* heroesrfbclientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heroesrfbclientTests.swift; sourceTree = "<group>"; };
+		368385231CD7071F00C84DA6 /* RectAdditionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectAdditionsTests.swift; sourceTree = "<group>"; };
 		368385251CD7071F00C84DA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3683852E1CD7120600C84DA6 /* heroesrfbclient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "heroesrfbclient-Bridging-Header.h"; sourceTree = "<group>"; };
 		368385321CD71FC200C84DA6 /* RFBFramebufferedConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFBFramebufferedConnection.h; sourceTree = "<group>"; };
@@ -126,6 +119,7 @@
 				368385421CD8591800C84DA6 /* RFBRectView.swift */,
 				367BE2CA1CD878DE0089F649 /* RFBRectView+Autoconnect.swift */,
 				367BE2CC1CD87B3B0089F649 /* FrameBufferUpdater.swift */,
+				367BE2CE1CD8A1220089F649 /* RectAdditions.swift */,
 			);
 			path = heroesrfbclient;
 			sourceTree = "<group>";
@@ -133,7 +127,7 @@
 		368385221CD7071F00C84DA6 /* heroesrfbclientTests */ = {
 			isa = PBXGroup;
 			children = (
-				368385231CD7071F00C84DA6 /* heroesrfbclientTests.swift */,
+				368385231CD7071F00C84DA6 /* RectAdditionsTests.swift */,
 				368385251CD7071F00C84DA6 /* Info.plist */,
 			);
 			path = heroesrfbclientTests;
@@ -198,7 +192,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				368385211CD7071F00C84DA6 /* PBXTargetDependency */,
 			);
 			name = heroesrfbclientTests;
 			productName = heroesrfbclientTests;
@@ -220,7 +213,6 @@
 					};
 					3683851E1CD7071F00C84DA6 = {
 						CreatedOnToolsVersion = 7.2.1;
-						TestTargetID = 368385081CD7071F00C84DA6;
 					};
 				};
 			};
@@ -326,6 +318,7 @@
 				367BE2CD1CD87B3B0089F649 /* FrameBufferUpdater.swift in Sources */,
 				3683850F1CD7071F00C84DA6 /* FirstViewController.swift in Sources */,
 				368385341CD71FC200C84DA6 /* RFBFramebufferedConnection.m in Sources */,
+				367BE2CF1CD8A1220089F649 /* RectAdditions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,19 +326,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				368385241CD7071F00C84DA6 /* heroesrfbclientTests.swift in Sources */,
+				368385241CD7071F00C84DA6 /* RectAdditionsTests.swift in Sources */,
+				367BE2D01CD8A1E00089F649 /* RectAdditions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		368385211CD7071F00C84DA6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 368385081CD7071F00C84DA6 /* heroesrfbclient */;
-			targetProxy = 368385201CD7071F00C84DA6 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		368385121CD7071F00C84DA6 /* Main.storyboard */ = {
@@ -480,24 +466,20 @@
 		3683852C1CD7071F00C84DA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = heroesrfbclientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.redetection.heroesrfbclientTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/heroesrfbclient.app/heroesrfbclient";
 			};
 			name = Debug;
 		};
 		3683852D1CD7071F00C84DA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = heroesrfbclientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.redetection.heroesrfbclientTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/heroesrfbclient.app/heroesrfbclient";
 			};
 			name = Release;
 		};
