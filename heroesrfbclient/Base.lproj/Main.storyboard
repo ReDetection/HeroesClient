@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--First-->
@@ -116,7 +117,7 @@
             </objects>
             <point key="canvasLocation" x="723" y="1700"/>
         </scene>
-        <!--Item 1-->
+        <!--Castle-->
         <scene sceneID="qjs-qW-HWE">
             <objects>
                 <viewController id="CAP-3c-s25" sceneMemberID="viewController">
@@ -127,13 +128,33 @@
                     <view key="view" contentMode="scaleToFill" id="uuv-Tf-1is">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2jy-B5-gEr" customClass="RFBRectView" customModule="heroesrfbclient" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="164" width="320" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2jy-B5-gEr" secondAttribute="height" multiplier="4:3" id="pEL-Il-Bu1"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="rect" keyPath="frameRect">
+                                        <rect key="value" x="0.0" y="0.0" width="800" height="600"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2jy-B5-gEr" firstAttribute="centerX" secondItem="uuv-Tf-1is" secondAttribute="centerX" id="3eY-9K-qwj"/>
+                            <constraint firstItem="2jy-B5-gEr" firstAttribute="leading" secondItem="uuv-Tf-1is" secondAttribute="leading" id="Bpg-Lz-f6H"/>
+                            <constraint firstItem="2jy-B5-gEr" firstAttribute="centerY" secondItem="uuv-Tf-1is" secondAttribute="centerY" id="QzH-Og-jlj"/>
+                            <constraint firstAttribute="trailing" secondItem="2jy-B5-gEr" secondAttribute="trailing" id="l4o-Tp-kNQ"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="zdd-zf-yzz"/>
+                    <tabBarItem key="tabBarItem" title="Castle" id="zdd-zf-yzz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IES-8X-yzj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="732" y="1048"/>
+            <point key="canvasLocation" x="723" y="1050"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jKS-UD-1ni">
@@ -245,7 +266,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Legacy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nCS-fx-I6h">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Debug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nCS-fx-I6h">
                                                     <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>

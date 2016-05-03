@@ -21,18 +21,7 @@ class FirstViewController: UIViewController {
             return
         }
         self.server = server
-        self.screenView.framebuffer = server.framebuffer
         
-        server.didUpdatedFrame = { [ weak server] in
-            server?.requestScreenUpdate(true)
-        }
-        server.didUpdatedRect = { [weak self] (rect) in
-            if let view = self?.screenView {
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    view.setNeedsDisplayInOuterRect(rect)
-                })
-            }
-        }
         server.didErrorOccurred = { [weak self] (error) in
             dispatch_async(dispatch_get_main_queue()) {
                 print ("\(error)")
@@ -43,7 +32,6 @@ class FirstViewController: UIViewController {
                 self?.presentViewController(alert, animated: true, completion: nil)
             }
         }
-        server.requestScreenUpdate(true)
         
     }
 

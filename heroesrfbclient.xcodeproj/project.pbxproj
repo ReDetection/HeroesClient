@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		367BE2CB1CD878DE0089F649 /* RFBRectView+Autoconnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367BE2CA1CD878DE0089F649 /* RFBRectView+Autoconnect.swift */; };
+		367BE2CD1CD87B3B0089F649 /* FrameBufferUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367BE2CC1CD87B3B0089F649 /* FrameBufferUpdater.swift */; };
 		3683850D1CD7071F00C84DA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683850C1CD7071F00C84DA6 /* AppDelegate.swift */; };
 		3683850F1CD7071F00C84DA6 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683850E1CD7071F00C84DA6 /* FirstViewController.swift */; };
 		368385111CD7071F00C84DA6 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368385101CD7071F00C84DA6 /* SecondViewController.swift */; };
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		367BE2CA1CD878DE0089F649 /* RFBRectView+Autoconnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RFBRectView+Autoconnect.swift"; sourceTree = "<group>"; };
+		367BE2CC1CD87B3B0089F649 /* FrameBufferUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameBufferUpdater.swift; sourceTree = "<group>"; };
 		368385091CD7071F00C84DA6 /* heroesrfbclient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = heroesrfbclient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3683850C1CD7071F00C84DA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3683850E1CD7071F00C84DA6 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 				368385321CD71FC200C84DA6 /* RFBFramebufferedConnection.h */,
 				368385331CD71FC200C84DA6 /* RFBFramebufferedConnection.m */,
 				368385421CD8591800C84DA6 /* RFBRectView.swift */,
+				367BE2CA1CD878DE0089F649 /* RFBRectView+Autoconnect.swift */,
+				367BE2CC1CD87B3B0089F649 /* FrameBufferUpdater.swift */,
 			);
 			path = heroesrfbclient;
 			sourceTree = "<group>";
@@ -311,11 +317,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				367BE2CB1CD878DE0089F649 /* RFBRectView+Autoconnect.swift in Sources */,
 				3683853B1CD771D200C84DA6 /* ConnectViewController.swift in Sources */,
 				368385111CD7071F00C84DA6 /* SecondViewController.swift in Sources */,
 				368385411CD7BFC500C84DA6 /* AppState.swift in Sources */,
 				3683850D1CD7071F00C84DA6 /* AppDelegate.swift in Sources */,
 				368385431CD8591800C84DA6 /* RFBRectView.swift in Sources */,
+				367BE2CD1CD87B3B0089F649 /* FrameBufferUpdater.swift in Sources */,
 				3683850F1CD7071F00C84DA6 /* FirstViewController.swift in Sources */,
 				368385341CD71FC200C84DA6 /* RFBFramebufferedConnection.m in Sources */,
 			);

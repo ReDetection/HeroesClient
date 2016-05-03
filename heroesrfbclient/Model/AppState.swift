@@ -12,6 +12,12 @@ class AppState {
 
     static let sharedInstance = AppState()
     
-    var server: RFBFramebufferedConnection?
+    var server: RFBFramebufferedConnection? {
+        didSet {
+            if let server = server {
+                FrameBufferUpdater.sharedInstance = FrameBufferUpdater(server: server)
+            }
+        }
+    }
     
 }
