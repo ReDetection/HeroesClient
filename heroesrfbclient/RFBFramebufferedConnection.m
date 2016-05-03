@@ -63,7 +63,6 @@
 }
 
 - (void)connection:(RFBConnection *)conn didReceiveDataForRect:(RFBRect *)aRect {
-    NSLog(@"encoding: %d", aRect.encoding);
     if (aRect.encoding == rfbEncodingRaw) {
         [self.framebuffer fillRect:aRect.rect withData:aRect.data];
     } else if (aRect.encoding == rfbEncodingTight) {
