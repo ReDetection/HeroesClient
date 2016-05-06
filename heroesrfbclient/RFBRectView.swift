@@ -27,9 +27,8 @@ class RFBRectView: UIView {
             CGContextSaveGState(ctx);
 
             if frameRect.height > 0 && frameRect.width > 0 {
-                CGContextTranslateCTM(ctx, -frameRect.origin.x, -frameRect.origin.y)
                 CGContextScaleCTM(ctx, self.scaleX, self.scaleY)
-                framebuffer.drawRect(frameRect, context: ctx)
+                framebuffer.drawRect(frameRect, fromPoint: CGPointZero, context: ctx);
                 
             } else {
                 framebuffer.drawFullInRect(CGRectMake(0, 0, framebuffer.size.width, framebuffer.size.height), context: ctx)
