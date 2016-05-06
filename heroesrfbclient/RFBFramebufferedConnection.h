@@ -24,6 +24,7 @@
 - (instancetype)initWithServerData:(RFBServerData *)serverData;
 - (BOOL)connect;
 - (void)requestScreenUpdate:(BOOL)incremental;
+- (void)sendMouseEvent:(UInt8)event atPoint:(CGPoint)point;
 - (void)close;
 
 @end

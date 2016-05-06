@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension RFBRectView {
     
@@ -14,6 +15,12 @@ extension RFBRectView {
         super.awakeFromNib()
         self.framebuffer = AppState.sharedInstance.server?.framebuffer
         FrameBufferUpdater.sharedInstance?.subscribeView(self)
+        
+        self.installTapRecognizers()
+        self.tapEventHandler = { (point) in
+            AppState.sharedInstance.server?.sendMouseEvent(1, atPoint: point)
+            AppState.sharedInstance.server?.sendMouseEvent(0, atPoint: point)
+        }
     }
     
 }

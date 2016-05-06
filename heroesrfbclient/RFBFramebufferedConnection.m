@@ -39,6 +39,10 @@
     [self.server close];
 }
 
+- (void)sendMouseEvent:(UInt8)event atPoint:(CGPoint)point {
+    [self.server sendPointerEvent:(CARD8)event position:point];
+}
+
 #pragma mark - connection delegate
 
 - (void)connection:(RFBConnection *)conn didReceiveServerInit:(rfbServerInitMsg)msg {

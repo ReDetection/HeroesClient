@@ -19,6 +19,7 @@ class RFBRectView: UIView {
     var scaleY: CGFloat {
         return self.bounds.size.height / frameRect.size.height
     }
+    var tapEventHandler: (CGPoint)->() = { _ in }
     
     override func drawRect(rect: CGRect) {
         if let framebuffer = self.framebuffer {
@@ -46,6 +47,22 @@ class RFBRectView: UIView {
             }
         } else {
             self.setNeedsDisplayInRect(outerRect)
+        }
+    }
+    
+    func installTapRecognizers() {
+        let tap = UITapGestureRecognizer(target: self, action: Selector("tapped:"))
+        tap.numberOfTapsRequired = 1
+        self.addGestureRecognizer(tap)
+    }
+    
+    func tapped(sender: UIGestureRecognizer) {
+        
+        if sender.state == .Ended {
+            var touchLocation = sender.locationInView(sender.view)
+            touchLocation.y = touchLocation.y / self.scaleY + frameRect.origin.y
+            touchLocation.x = touchLocation.x / self.scaleX + frameRect.origin.x
+            self.tapEventHandler(touchLocation)
         }
     }
 
