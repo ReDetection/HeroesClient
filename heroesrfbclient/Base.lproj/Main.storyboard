@@ -270,6 +270,55 @@
             </objects>
             <point key="canvasLocation" x="723" y="-296"/>
         </scene>
+        <!--minimap-->
+        <scene sceneID="ph3-hc-3RB">
+            <objects>
+                <viewController id="vVg-Yk-AgP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KFU-qL-PpO"/>
+                        <viewControllerLayoutGuide type="bottom" id="XZ3-Zx-ArS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ouC-tf-Xix">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YQa-2h-9F9" customClass="RFBRectView" customModule="heroesrfbclient" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="124" width="320" height="320"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YQa-2h-9F9" secondAttribute="height" multiplier="1:1" id="hnb-8R-D1C"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="rect" keyPath="frameRect">
+                                        <rect key="value" x="630" y="26" width="144" height="144"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="parentController" destination="Ow1-ch-uCF" id="RrW-Ds-mty"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XZ3-Zx-ArS" firstAttribute="top" relation="greaterThanOrEqual" secondItem="YQa-2h-9F9" secondAttribute="bottom" id="CeR-D8-9jj"/>
+                            <constraint firstItem="YQa-2h-9F9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ouC-tf-Xix" secondAttribute="leading" id="JKl-Jj-IdG"/>
+                            <constraint firstItem="YQa-2h-9F9" firstAttribute="width" secondItem="YQa-2h-9F9" secondAttribute="height" multiplier="1:1" id="McU-gS-gNn"/>
+                            <constraint firstItem="YQa-2h-9F9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="KFU-qL-PpO" secondAttribute="bottom" id="OlK-hM-aQF"/>
+                            <constraint firstItem="YQa-2h-9F9" firstAttribute="centerX" secondItem="ouC-tf-Xix" secondAttribute="centerX" id="WVm-Dg-CTf"/>
+                            <constraint firstItem="XZ3-Zx-ArS" firstAttribute="top" secondItem="YQa-2h-9F9" secondAttribute="bottom" priority="750" id="d7S-ya-Jf2"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YQa-2h-9F9" secondAttribute="trailing" id="kAQ-sl-q4s"/>
+                            <constraint firstItem="YQa-2h-9F9" firstAttribute="leading" secondItem="ouC-tf-Xix" secondAttribute="leading" priority="750" id="pRl-mE-mE9"/>
+                            <constraint firstItem="YQa-2h-9F9" firstAttribute="centerY" secondItem="ouC-tf-Xix" secondAttribute="centerY" id="pzS-pT-SCg"/>
+                            <constraint firstItem="YQa-2h-9F9" firstAttribute="top" secondItem="KFU-qL-PpO" secondAttribute="bottom" priority="750" id="unc-Hm-e69"/>
+                            <constraint firstAttribute="trailing" secondItem="YQa-2h-9F9" secondAttribute="trailing" priority="750" id="vXx-8y-qzl"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="minimap" id="eFP-wz-vOi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gVq-qI-ofE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1113" y="20"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zqK-jI-VW0">
             <objects>
@@ -283,6 +332,7 @@
                     <connections>
                         <segue destination="Pyt-79-ebi" kind="relationship" relationship="viewControllers" id="gFb-Bm-xS8"/>
                         <segue destination="Ow1-ch-uCF" kind="relationship" relationship="viewControllers" id="KwN-Wa-kTV"/>
+                        <segue destination="vVg-Yk-AgP" kind="relationship" relationship="viewControllers" id="yrX-v1-DC3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ynz-uC-pEH" userLabel="First Responder" sceneMemberID="firstResponder"/>
