@@ -4,7 +4,7 @@
 # use_frameworks!
 
 target 'heroesrfbclient' do
-    pod 'RFBConnection', :path => '~/src/github/NPDesktop'
+    pod 'RFBConnection', '0.1.1'
 end
 
 target 'heroesrfbclientTests' do

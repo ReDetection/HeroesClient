@@ -1,14 +1,10 @@
 PODS:
-  - RFBConnection (0.1.0)
+  - RFBConnection (0.1.1)
 
 DEPENDENCIES:
-  - RFBConnection (from `~/src/github/NPDesktop`)
-
-EXTERNAL SOURCES:
-  RFBConnection:
-    :path: ~/src/github/NPDesktop
+  - RFBConnection (= 0.1.1)
 
 SPEC CHECKSUMS:
-  RFBConnection: 857c44573c3ea5e558cbed16666510201d7b9b85
+  RFBConnection: 7d0bda5d41d000e5377762e08f8febf1401eaeba
 
 COCOAPODS: 0.39.0
