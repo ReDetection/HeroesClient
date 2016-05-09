@@ -87,6 +87,7 @@ class ConnectViewController: UIViewController, UITextFieldDelegate {
         config.host = host
         config.port = port
         config.password = password
+        config.shared = true
         
         var dispatch_once_token: dispatch_once_t = 0
         
