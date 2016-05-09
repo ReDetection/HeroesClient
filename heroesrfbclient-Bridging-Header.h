@@ -5,5 +5,5 @@
 #import <RFBConnection/RFBConnection.h>
 #import <RFBConnection/RFBServerData.h>
 #import <RFBConnection/RFBFrameBuffer.h>
+#import <RFBConnection/RFBFramebufferedConnection.h>
 
-#import "RFBFramebufferedConnection.h"

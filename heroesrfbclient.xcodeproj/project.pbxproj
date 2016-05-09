@@ -18,7 +18,6 @@
 		368385161CD7071F00C84DA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 368385151CD7071F00C84DA6 /* Assets.xcassets */; };
 		368385191CD7071F00C84DA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368385171CD7071F00C84DA6 /* LaunchScreen.storyboard */; };
 		368385241CD7071F00C84DA6 /* RectAdditionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368385231CD7071F00C84DA6 /* RectAdditionsTests.swift */; };
-		368385341CD71FC200C84DA6 /* RFBFramebufferedConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 368385331CD71FC200C84DA6 /* RFBFramebufferedConnection.m */; };
 		368385391CD770ED00C84DA6 /* ConnectToServer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368385381CD770ED00C84DA6 /* ConnectToServer.storyboard */; };
 		3683853B1CD771D200C84DA6 /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683853A1CD771D200C84DA6 /* ConnectViewController.swift */; };
 		368385411CD7BFC500C84DA6 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368385401CD7BFC500C84DA6 /* AppState.swift */; };
@@ -42,8 +41,6 @@
 		368385231CD7071F00C84DA6 /* RectAdditionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectAdditionsTests.swift; sourceTree = "<group>"; };
 		368385251CD7071F00C84DA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3683852E1CD7120600C84DA6 /* heroesrfbclient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "heroesrfbclient-Bridging-Header.h"; sourceTree = "<group>"; };
-		368385321CD71FC200C84DA6 /* RFBFramebufferedConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFBFramebufferedConnection.h; sourceTree = "<group>"; };
-		368385331CD71FC200C84DA6 /* RFBFramebufferedConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFBFramebufferedConnection.m; sourceTree = "<group>"; };
 		368385381CD770ED00C84DA6 /* ConnectToServer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ConnectToServer.storyboard; sourceTree = "<group>"; };
 		3683853A1CD771D200C84DA6 /* ConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
 		368385401CD7BFC500C84DA6 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -114,8 +111,6 @@
 				368385151CD7071F00C84DA6 /* Assets.xcassets */,
 				368385171CD7071F00C84DA6 /* LaunchScreen.storyboard */,
 				3683851A1CD7071F00C84DA6 /* Info.plist */,
-				368385321CD71FC200C84DA6 /* RFBFramebufferedConnection.h */,
-				368385331CD71FC200C84DA6 /* RFBFramebufferedConnection.m */,
 				368385421CD8591800C84DA6 /* RFBRectView.swift */,
 				367BE2CA1CD878DE0089F649 /* RFBRectView+Autoconnect.swift */,
 				367BE2CC1CD87B3B0089F649 /* FrameBufferUpdater.swift */,
@@ -317,7 +312,6 @@
 				368385431CD8591800C84DA6 /* RFBRectView.swift in Sources */,
 				367BE2CD1CD87B3B0089F649 /* FrameBufferUpdater.swift in Sources */,
 				3683850F1CD7071F00C84DA6 /* FirstViewController.swift in Sources */,
-				368385341CD71FC200C84DA6 /* RFBFramebufferedConnection.m in Sources */,
 				367BE2CF1CD8A1220089F649 /* RectAdditions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
