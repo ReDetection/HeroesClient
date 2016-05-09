@@ -5,3 +5,4 @@ xcuserdata
 *.realm.lock
 *.realm.log*
 /Carthage/Checkouts
+/Pods/
